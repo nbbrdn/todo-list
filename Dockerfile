@@ -1,7 +1,8 @@
 FROM python:3.9-slim-buster
 
-ENV PYTHONFAULTHANDLER=1 \
-    PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONFAULTHANDLER 1
 
 RUN apt-get update -qq \
     && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends \
